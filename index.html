@@ -26,13 +26,13 @@
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           if (input.value) {
-            socket.emit('pay', input.value);
+            socket.emit('transaction', input.value);
             input.value = '';
           }
         });
 
-        socket.on('paid', function(msg) {
-          console.log('msg: ', msg)
+        socket.on('transaction', function(msg) {
+          console.log('msg: ', msg, 'bla')
           var item = document.createElement('li');
           item.textContent = msg;
           messages.appendChild(item);

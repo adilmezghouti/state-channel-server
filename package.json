@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Payment state channel socket server",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "4",
     "socket.io": "^4.5.1"
   }

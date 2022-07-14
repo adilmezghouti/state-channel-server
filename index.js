@@ -5,9 +5,8 @@ const server = http.createServer(app);
 var cors = require('cors')
 
 const io = require("socket.io")(server, {
-  cors: {
-    origin: "*",
-    methods: ["GET", "POST"]
+  allowRequest: (req, callback) => {
+    callback(null, true);
   }
 });
 

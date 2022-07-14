@@ -11,7 +11,7 @@ app.use(cors({
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://liqchan.netlify.app"],
+    origin: ["http://localhost:3000", "https://liqchan.netlify.app", "https://openpay.netlify.app"],
     methods: ["GET", "POST"],
     credentials: true
   }

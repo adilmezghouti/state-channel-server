@@ -6,7 +6,7 @@ var cors = require('cors')
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["http://localhost:3000/", "https://thunder-network.github.io/"],
+    origin: ["http://localhost:3000", "https://thunder-network.github.io"],
     methods: ["GET", "POST"]
   }
 });

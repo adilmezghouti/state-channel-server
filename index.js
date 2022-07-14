@@ -15,6 +15,6 @@ io.on('connection', (socket) => {
     io.emit('paid', msg);
   });
 });
-server.listen(80, () => {
-  console.log('listening on *:80');
+server.listen(process.env.PORT, () => {
+  console.log('listening on *:' + process.env.PORT);
 });

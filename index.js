@@ -4,6 +4,11 @@ const http = require('http');
 const server = http.createServer(app);
 var cors = require('cors')
 
+app.use(cors({
+  origin: true,
+  credentials: true
+}))
+
 const io = require("socket.io")(server, {
   cors: {
     origin: ["http://localhost:3000", "https://thunder-network.github.io"],
@@ -11,7 +16,7 @@ const io = require("socket.io")(server, {
   }
 });
 
-app.use(cors())
+
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');

@@ -5,8 +5,9 @@ const server = http.createServer(app);
 var cors = require('cors')
 
 const io = require("socket.io")(server, {
-  allowRequest: (req, callback) => {
-    callback(null, true);
+  cors: {
+    origin: ["http://localhost:3000/", "https://thunder-network.github.io/"],
+    methods: ["GET", "POST"]
   }
 });
 

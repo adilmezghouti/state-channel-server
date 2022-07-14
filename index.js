@@ -11,7 +11,7 @@ app.use(cors({
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://thunder-network.github.io"],
+    origin: ["http://localhost:3000", "liqchan.netlify.app"],
     methods: ["GET", "POST"],
     credentials: true
   }
